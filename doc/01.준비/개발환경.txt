@@ -1,0 +1,4 @@
+PYTHON 3.12.3
+FLASK
+HTML, CSS, JavaScript
+MYSQL, HS
