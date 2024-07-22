@@ -1,3 +1,5 @@
+VScode
+Git
 PYTHON 3.12.3
 FLASK
 JSP
