@@ -1,0 +1,102 @@
+CREATE TABLE Users (
+    user_id VARCHAR(255) PRIMARY KEY,  -- 카카오에서 제공하는 유저 ID
+    email VARCHAR(255) NOT NULL,
+    name VARCHAR(255),
+    refresh_token TEXT,                -- 카카오에서 제공하는 REFRESH_TOKEN     
+    industry VARCHAR(255),             -- 산업 분야
+    job_position VARCHAR(255),         -- 지원하는 직무
+    technical_skills TEXT,             -- 기술 스킬: 보유한 기술 및 자격증
+    major TEXT,                        -- 학과
+    certifications TEXT,               -- 자격증
+    special_experience TEXT,           -- 특별한 경험: 프로젝트 경험, 인턴십, 봉사활동 등
+    cover_letter TEXT,                 -- 자기소개서 내용: 자기소개서나 지원서에서 강조한 내용    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE AcssLog (
+   acss_log_num SERIAL PRIMARY KEY,
+   user_id VARCHAR(255),  
+   acss_ip VARCHAR(20),
+   log_txt TEXT,
+   acss_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+
+CREATE TABLE ErrorLog (
+   error_log_num SERIAL PRIMARY KEY,
+   user_id VARCHAR(255),              -- 로그인된 사용자가 있다면 유저 ID
+   error_ip VARCHAR(20),             
+   error_url VARCHAR(200),            -- 에러가 발생한 URL
+   error_txt LONGTEXT,
+   error_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Interviews (
+    interview_id INT AUTO_INCREMENT PRIMARY KEY,
+    interview_nm NVARCHAR(256),         -- 면접 TITLE
+    user_id VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+
+CREATE TABLE Questions (
+    question_id INT AUTO_INCREMENT PRIMARY KEY,
+    question_text TEXT NOT NULL,
+    interview_id INT,
+    FOREIGN KEY (interview_id) REFERENCES Interviews(interview_id)
+);
+
+CREATE TABLE Responses (
+    response_id SERIAL PRIMARY KEY,
+    interview_id INT,
+    question_id INT,
+    response_text LONGTEXT,
+    FOREIGN KEY (interview_id) REFERENCES Interviews(interview_id),
+    FOREIGN KEY (question_id) REFERENCES Questions(question_id)
+);
+
+
+CREATE TABLE ImageFiles (
+  FILE_SEQ INT AUTO_INCREMENT COMMENT '파일 정보 시퀀스',
+  ORG_FILE_NM VARCHAR(200) NOT NULL COMMENT '실 파일 명',
+  SYS_FILE_NM VARCHAR(200) NOT NULL COMMENT '시스템 파일 명',
+  file_path VARCHAR(255) NOT NULL,
+  REG_ID VARCHAR(50) NOT NULL COMMENT '등록자ID',
+  REG_DT DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록일자',
+  DOWN_NUM INT DEFAULT 0,    -- 다운로드
+  PRIMARY KEY (FILE_SEQ)
+);
+
+CREATE TABLE VideoFiles (
+  VIDEO_SEQ INT AUTO_INCREMENT COMMENT '파일 정보 시퀀스',
+  ORG_FILE_NM VARCHAR(200) NOT NULL COMMENT '실 파일 명',
+  SYS_FILE_NM VARCHAR(200) NOT NULL COMMENT '시스템 파일 명',
+  file_path VARCHAR(255) NOT NULL,
+  REG_ID VARCHAR(50) NOT NULL COMMENT '등록자ID',
+  REG_DT DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록일자',
+  PRIMARY KEY (VIDEO_SEQ)
+);
+
+CREATE TABLE Reports (
+    report_id SERIAL PRIMARY KEY,
+    interview_id INT,
+    question_id INT,
+    morpheme TEXT,     -- 많이 나온 형태소 리스트             
+    cloud_grap INT,    -- 형태소 클라우드 그래프 파일   
+    face_image INT,    -- 표정 분석 사진 파일
+    smile VARCHAR(10),
+    angry VARCHAR(10),
+    sad VARCHAR(10),
+    face_less VARCHAR(10),
+    speaking_speed VARCHAR(255),  -- 데이터 타입 수정
+    video_seq INT,    -- 동영상 파일
+    total_comment LONGTEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (interview_id) REFERENCES Interviews(interview_id),
+    FOREIGN KEY (question_id) REFERENCES Questions(question_id),
+    FOREIGN KEY (video_seq) REFERENCES VideoFiles(VIDEO_SEQ),    
+    FOREIGN KEY (cloud_grap) REFERENCES ImageFiles(FILE_SEQ), 
+    FOREIGN KEY (face_image) REFERENCES ImageFiles(FILE_SEQ)        
+);
