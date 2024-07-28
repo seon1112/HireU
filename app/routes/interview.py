@@ -1,1 +1,0 @@
-# interviewSetting을 따로 뺄까하다가 여기다가 같이 추가하는걸로
