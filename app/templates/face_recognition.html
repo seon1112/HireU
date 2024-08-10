@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hireu.css') }}">
+    <title>Camera and Microphone Test</title>
+</head>
+<body>
+    <h1>Camera and Microphone Test</h1>
+
+    <h2>Camera Test</h2>
+    <img src="{{ url_for('face_recognition.video_feed') }}" width="640" height="480">
+
+    <h2>Microphone Test</h2>
+    <button onclick="startRecording()">Start Recording</button>
+    <p id="recording-status"></p>
+
+    <script>
+        function startRecording() {
+            document.getElementById('recording-status').innerText = 'Recording...';
+            fetch('/start_audio_recording', {
+                method: 'POST'
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('recording-status').innerText = 'Recording completed.';
+                } else {
+                    document.getElementById('recording-status').innerText = 'Recording failed.';
+                }
+            }).catch(error => {
+                document.getElementById('recording-status').innerText = 'Recording failed.';
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>

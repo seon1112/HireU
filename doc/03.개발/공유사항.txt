@@ -1,2 +1,13 @@
 - SQLAlchemy import 
 pip install flask_sqlalchemy
+
+-mysql
+pip install pymysql
+
+-flask
+pip install flask
+
+-opencv-python 라이브러리와 pyaudio 라이브러리
+pip install pyaudio
+pip install opencv-python
+
