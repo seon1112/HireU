@@ -1,0 +1,541 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); .notosanskr * { font-family: 'Noto Sans KR', sans-serif; }
+/*Thin 100/ Light 300/ DemiLight 350 / Regular 400 / Medium 500 / Bold 700/ Black 900*/
+
+html,body {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR";
+  -webkit-text-size-adjust : none ; /*크롬,사파리,오페라 신버전*/
+  -ms-text-size-adjust:none; /*IE and Edge*/
+  -moz-text-size-adjust:none; /*파이어폭스*/  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+}
+
+div,input,textarea{
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+  box-sizing: inherit;
+  padding: 0;
+  margin : 0;
+}
+
+li{
+  display: list-item;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--Main-12);
+}
+
+select:focus{
+  outline: none;
+}
+
+a:active,
+a:hover 
+,textarea:active
+,textarea:focus{
+  outline: 0;
+}
+button{
+  border:none;
+  background:none;
+  cursor: pointer;
+}
+
+input[type="text"],input[type="date"],input[type="password"]{
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none
+}
+.cursor{
+  cursor: pointer;
+}
+
+/*font*/
+.font-headline1 {
+  font-style: normal;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: normal;
+}
+
+.font-headline2 {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: normal;
+}
+
+.font-headline3 {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: normal;
+}
+
+.font-headline4 {
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 160%;
+}
+
+.font-body1 {
+  font-style: normal;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: normal;
+}
+
+.font-body2 {
+  font-style: normal;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: normal;
+}
+
+.font-body3 {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: 140%;
+}
+
+.font-body4 {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: 140%;
+}
+
+.font-body5 {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 140%;
+}
+
+.font-body6 {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 140%;
+}
+
+.font-body7 {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: 140%;
+}
+
+.font-body8 {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 140%;
+}
+
+.font-body9 {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 140%;
+}
+
+.font-body10 {
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 140%;
+}
+
+.font-body11 {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 140%;
+}
+
+.font-body12 {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  line-height: 140%;
+}
+
+.font-body13 {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 140%;
+}
+
+.font-body14 {
+  font-style: normal;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 160%;
+}
+
+.font-body15 {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 160%;
+}
+
+.font-body16 {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 160%;
+}
+
+.font-body17 {
+  font-style: normal;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 160%;
+}
+
+.font-body18 {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 160%;
+}
+
+.font-btn1 {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.font-btn2 {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.font-btn3 {
+  font-style: normal;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.font-btn4 {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/*button*/
+.base_primary_btn{
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 10px;
+    color: var(--White);
+    background-color: var(--Main-3);
+    white-space: nowrap;
+    font-family: 'Noto Sans KR';
+    min-width: 145px;
+}
+
+.base_primary_btn:hover{
+    background-color: var(--Main-13);
+}
+
+.base_white_btn{
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 10px;
+    color: var(--Main-3);
+    background-color: var(--White);
+    border: 2px solid var(--Main-3);
+    white-space: nowrap;
+    font-family: 'Noto Sans KR';
+    min-width: 145px;
+}
+
+.base_white_btn:hover{
+    background-color: var(--Main-9);
+}
+
+.main_square_btn1{
+    display: inline-flex;
+    padding: 43px 89px;
+    background-color:var(--White-90);
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: var(--Main-8);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: auto;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Noto Sans KR';    
+}
+
+.main_square_btn1:hover{
+    background-color: var(--White);
+    color: var(--Main-14);
+}
+
+.main_square_btn2{
+    display: inline-flex;
+    padding: 43px 89px;
+    background-color:var(--White-40);
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: var(--White);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: auto;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Noto Sans KR';    
+}
+
+.main_square_btn2:hover{
+    background-color: var(--White-90);
+    color: var(--Main-8);
+}
+
+.base_square_btn1{
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--Main-15);
+  background-color: var(--White);
+  border: 1px solid var(--Main-15-40);
+  cursor: pointer;
+  padding: 10px 58px 10px 20px;
+  background-image: url('../images/icon/download.png');
+  background-position: center right 20px;
+  background-size: 28px;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  font-family: 'Noto Sans KR';  
+}
+
+.base_square_btn1:hover{
+  background-color: var(--Main-16);
+}
+
+/*tab*/
+.nav_tab{
+  padding: 16px 37px 16px 75px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--Main-17);
+  background-color: var(--White);
+  cursor: pointer;
+  background-image: url('../images/icon/people_gray.png');
+  background-position: center left 16px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+  font-family: 'Noto Sans KR';   
+}
+
+.nav_tab:hover{
+  background-color: var(--Main-10);  
+}
+
+.nav_tab.selected{
+  background-image: url('../images/icon/people_navy.png');
+  color: var(--Main-18);
+  background-color: var(--Main-19);  
+}
+
+/*controller*/
+input.txtboxtype[type="checkbox"]{
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--Main-20);
+  margin: 2px;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR';  
+  border-radius: 50%; 
+}
+
+input.txtboxtype[type="checkbox"]:hover {
+  display: block;
+  content:'';
+  background-image:url('../images/icon/check_white.png'); /*임시 아이콘임 변경해야함*/
+  background-repeat:no-repeat;
+  background-size : 10px 10px;
+  background-position:center;
+  height: 16px;
+  width: 16px;
+}
+
+input.txtboxtype[type="checkbox"]:checked {
+  background: var(--Main-3);
+}
+
+input.txtboxtype[type="checkbox"]:checked::after {
+  display: block;
+  content:'';
+  background-image:url('../images/icon/check_white.png'); /*임시 아이콘임 변경해야함*/
+  background-repeat:no-repeat;
+  background-size : 10px 10px;
+  background-position:center;
+  height: 16px;
+  width: 16px;
+}
+
+/*input*/
+input.search_input{
+  border: 1px solid var(--Main-21);
+  width: 600px;
+  padding: 12px 25px 12px 25px;
+  border-radius: 10px;
+  background-color: var(--White);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: 'Noto Sans KR';  
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.1);
+  min-height: 271px;   
+}
+
+textarea.search_input2{
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  border: 1px solid var(--Main-21);
+  background-color: var(--White);
+  font-family: 'Noto Sans KR';   
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+input.search_input:not(:focus):hover{
+  border: 1px solid var(--Main-3);
+}
+
+input.search_input:focus{
+  border: 1px solid var(--Main-3); 
+  box-shadow: 0px 2px 1px 0px rgba(68, 94, 241, 0.1);
+}
+
+/*header*/
+header{
+  height: 60px;
+  color: var(--Main-12);
+  z-index: 99;
+  background-color: var(--White);
+  position: relative;
+  font-family: 'Noto Sans KR';
+  padding: 18px 80px ;
+  box-sizing: border-box;
+}
+
+header.dark{
+  background-color: var(--Main-22);
+  padding: 0px 80px ;
+  color: var(--White);
+}
+
+header .header_box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.dark .header_box > button{
+  color: var(--White);
+  padding:18px 0px;
+}
+
+header .logo_image{
+  background-image: url(../images/logo.png);
+  background-size: 100%;
+  height: 24px;
+  width: 69px;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+header.dark .logo_image{
+  background-image: url(../images/logo_white.png);
+  background-size: 100%;
+  height: 54px;
+  width: 69px;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+@media screen and (max-width: 1180px){
+}
+

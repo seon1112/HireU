@@ -1,0 +1,33 @@
+@charset "utf-8";
+:root{
+    --White    : #FFFFFF;
+    --White-40 :rgba(255, 255, 255, 0.4);
+    --White-90 :rgba(255, 255, 255, 0.9);
+
+    --Main-0   : #445EF1;
+    --Main-1   : #82CDDE;
+    --Main-2   : #3780B9;
+    --Main-3   : #445EF1;
+    --Main-4   : #253871;        
+    --Main-5   : #B0B0B0;   
+    --Main-6   : #7A92AE;   
+    --Main-7   : #7A92AE;   
+    --Main-8   : #184BC3;   
+    --Main-9   : #DFE4FF;   
+    --Main-10  : #F3F6FF;   
+    --Main-11  : #D7E7FB;   
+    --Main-12  : #222222;      
+    --Main-13  : #273FC4;
+    --Main-14  : #1E61FF;
+    --Main-15  : #5980FF;
+    --Main-15-40  : rgba(89, 128, 255, 0.5);
+    --Main-16  : #EDF0F9;
+    --Main-17  : #9D9D9D;
+    --Main-18  : #2B5788;
+    --Main-19  : #D2E4FB;
+    --Main-20  : #B6B6B6;
+    --Main-21  : #E6E6E6;
+    --Main-22  : #020E26;
+    --Main-23  : #f5f5f5;
+    --Main-24  : #fcfcfc;
+}

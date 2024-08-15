@@ -1,0 +1,30 @@
+@charset "utf-8";
+div.main_container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin:0px auto 0px auto;
+    min-height: 700px;
+    position: relative;  
+    background-color: var(--Main-23);
+}
+
+div.main_container .content_container{
+    width: 100%;
+    max-width: 1462px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 227px 1fr;
+}
+
+div.main_container .sidebar{
+    background-color: var(--White);
+    padding-block: 30px;
+}
+
+div.main_container  .main_content{
+    overflow-y: auto;
+    background-color: var(--Main-24);
+}
+

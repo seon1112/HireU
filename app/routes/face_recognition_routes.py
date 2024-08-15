@@ -82,6 +82,6 @@ def play_audio():
     else:
         return abort(404, description="File not found")
     
-@face_recognition_bp.route('/')
+@face_recognition_bp.route('/face_recognition')
 def index():
     return render_template('face_recognition.html')
