@@ -18,8 +18,110 @@
     </header>    
     <div class="main_container">
       <section class="content_container">
-        <aside class="sidebar"></aside>
-        <section class="main_content"></section>
+        <!--sidebar-->
+        <aside class="sidebar">
+          <div class="user_container">
+            <div class="user_info_wrap">
+              <div class="user_icon_box">
+                <img>
+              </div>
+              <div class="font-body5">행복한 고냥이<span class="font-body9">님</span></div>
+            </div>
+            <div class="user_histroy_wrap">
+              <div class="user_histroy_box font-body13">
+                <span>면접 진행 횟수</span>
+                <span class="font-body12">5회</span>  
+              </div>              
+              <div class="user_histroy_box font-body13">
+                <span>최근 접속일</span>
+                <span class="font-body12">2024.08.18</span>  
+              </div>              
+            </div>
+          </div>
+          <div class="tab_container">
+            <button class="nav_tab people">기본 정보<div class="end_bar"></div></button>
+            <button class="nav_tab interview selected">면접 질문<div class="end_bar"></div></button>
+            <button class="nav_tab histroy">면접 히스토리<div class="end_bar"></div></button>
+            <button class="nav_tab qna">문의하기<div class="end_bar"></div></button>
+          </div>
+        </aside>
+        <!--메인-->
+        <section class="main_content">
+          <div class="interview_qna_header">
+            <div class="header_title font-headline2">AI 면접 질문 선택</div>
+            <div class="header_sub font-body11">면접 질문은 최대 5개까지 선택 가능합니다.</div>
+          </div>
+          <div class="interview_qna_wrap">
+            <div class="interview_qna_content">
+              <div class="content_title font-body4">면접 히스토리 질문</div>
+              <div class="content_wrap">
+                <button type="button" class="plus_btn"></button>
+                <button type="button" class="base_white_btn">면접 히스토리에서 질문리스트 불러오기</button>
+              </div>
+            </div>
+            <div class="interview_qna_content">
+              <div class="content_title font-body4">기본 질문</div>
+              <div class="content_wrap">
+                <div class="qna_list">
+                  <div class="qna_item">
+                    <label for="main_qna_check1" class="hidden_label">1번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check1">
+                    <label for="main_qna1" class="hidden_label">1번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna1" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check2" class="hidden_label">2번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check2">
+                    <label for="main_qna2" class="hidden_label">2번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna2" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check3" class="hidden_label">3번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check3">
+                    <label for="main_qna3" class="hidden_label">3번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna3" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check4" class="hidden_label">4번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check4">
+                    <label for="main_qna4" class="hidden_label">4번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna4" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check5" class="hidden_label">5번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check5">
+                    <label for="main_qna5" class="hidden_label">5번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna5" disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="interview_qna_content">
+              <div class="content_title font-body4">
+                <span>AI로 나만의 질문 생성</span>
+                <div class="btn_box">
+                  <button class="base_primary_btn">내 기본정보 불러오기</button>
+                  <button class="base_white_btn">입력한 내용을 내 기본정보로 저장</button>
+                </div>
+              </div>
+              <div class="content_wrap">
+              </div>
+            </div>
+            <div class="interview_qna_content">
+              <div class="content_title font-body4">질문 직접 입력</div>
+              <div class="content_wrap">
+              </div>
+            </div>
+          </div>
+          <!--하단 고정 바-->
+          <div class="fixed-action-bar">
+            <div class="bar_content font-body7">5개 중 1개 선택중</div>
+            <div class="bar_btn_box">
+              <button class="base_primary_large_btn">면접 시작하기</button>
+              <button class="base_white_large_btn">랜덤 질문으로 시작하기</button>
+            </div>
+          </div>
+        </section>
     </section>
     </div>
 
