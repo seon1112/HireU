@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/color.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hireu.css') }}">
+  </head>
+
+  <style type="text/css">
+    .history_content{
+        border-radius: 20px;
+        border: 1px solid var(--Main-25);
+        display: grid;
+        align-items: center;
+    }
+    .history_title{
+        float: left;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .history_content button{
+      margin-left: 10px;
+    }
+    .history_btn{
+      float: right; 
+      position: absolute; 
+      right: 10%;
+    }
+    .history_wrap {
+        display: flex;
+        align-items: center;
+        padding: 40px;
+        height: 120px;
+    }
+    .dropdown {
+      width: 100%;
+      text-align: center;
+      height: 40px;
+      align-items: center;
+      display: grid;
+      background: #F0F0F0;
+      border-radius: 0 0 20px 20px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  </style>
+  
+  <body>
+
+    <header><!--dark 클래스 추가하면 어두운 header-->
+      <div class="header_box">
+          <a href="#" class="logo_image"></a>
+          <button class="font-body7">준열이형이야</button>
+      </div>    
+    </header>    
+    <div class="main_container">
+      <section class="content_container">
+        <!--sidebar-->
+        <aside class="sidebar">
+          <div class="user_container">
+            <div class="user_info_wrap">
+              <div class="user_icon_box">
+                <img>
+              </div>
+              <div class="font-body5">준열이형이야<span class="font-body9">님</span></div>
+            </div>
+            <div class="user_histroy_wrap">
+              <div class="user_histroy_box font-body13">
+                <span>면접 진행 횟수</span>
+                <span class="font-body12">731회</span>  
+              </div>              
+              <div class="user_histroy_box font-body13">
+                <span>최근 접속일</span>
+                <span class="font-body12">2024.08.18</span>  
+              </div>              
+            </div>
+          </div>
+          <div class="tab_container">
+            <button class="nav_tab people">기본 정보<div class="end_bar"></div></button>
+            <button class="nav_tab interview">면접 질문<div class="end_bar"></div></button>
+            <button class="nav_tab histroy selected">면접 히스토리<div class="end_bar"></div></button>
+            <button class="nav_tab qna">문의하기<div class="end_bar"></div></button>
+          </div>
+        </aside>
+        <!--메인-->
+        <section class="main_content">
+          <div class="interview_qna_header">
+            <div class="header_title font-headline2">면접 히스토리</div>
+            <div class="header_sub font-body11">개별 보고서는 확인만(30일 기한) 가능하고 종합 보고서는 PDF파일 저장까지 가능합니다.</div>
+          </div>
+          <div class="interview_qna_wrap">
+            <div class="interview_qna_content">
+              <div class="history_content">
+                <div class="history_wrap">
+                    <div class="history_title">
+                      <div class="content_title font-body16">2024년 8월 18일의 면접(1)</div>
+                      <div class="header_sub font-body12">2024년 8월 18일</div>
+                    </div>
+                    <div class="history_btn" style="float: right; position: absolute; right: 10%;">
+                      <button class="base_white_btn">삭제하기</button>
+                      <button class="base_primary_btn">결과보기</button>
+                    </div>
+                </div>
+                <div class="dropdown">질문 보기 ▼</div>
+              </div>
+            </div>
+            <div class="interview_qna_content">
+              <div class="history_content">
+                <div class="history_wrap">
+                    <div class="history_title">
+                      <div class="content_title font-body16">2024년 8월 18일의 면접(2)</div>
+                      <div class="header_sub font-body12">2024년 8월 18일</div>
+                    </div>
+                    <div class="history_btn" style="float: right; position: absolute; right: 10%;">
+                      <button class="base_white_btn">삭제하기</button>
+                      <button class="base_primary_btn">결과보기</button>
+                    </div>
+                </div>
+                <div class="dropdown">질문 보기 ▼</div>
+              </div>
+            </div>
+            <div class="interview_qna_content">
+              <div class="history_content">
+                <div class="history_wrap">
+                    <div class="history_title">
+                      <div class="content_title font-body16">새로운 질문으로 했던 면접!</div>
+                      <div class="header_sub font-body12">2024년 8월 17일</div>
+                    </div>
+                    <div class="history_btn" style="float: right; position: absolute; right: 10%;">
+                      <button class="base_white_btn">삭제하기</button>
+                      <button class="base_primary_btn">결과보기</button>
+                    </div>
+                </div>
+                <div class="dropdown">질문 보기 ▼</div>
+              </div>
+            </div>
+            <div class="interview_qna_content">
+              <div class="history_content">
+                <div class="history_wrap">
+                    <div class="history_title">
+                      <div class="content_title font-body16">카카오 개발자 질문</div>
+                      <div class="header_sub font-body12">2024년 8월 10일</div>
+                    </div>
+                    <div class="history_btn" style="float: right; position: absolute; right: 10%;">
+                      <button class="base_white_btn">삭제하기</button>
+                      <button class="base_primary_btn">결과보기</button>
+                    </div>
+                </div>
+                <div class="dropdown">질문 보기 ▼</div>
+              </div>
+            </div>
+            <div class="interview_qna_content">
+              <div class="history_content">
+                <div class="history_wrap">
+                    <div class="history_title">
+                      <div class="content_title font-body16">다시시작</div>
+                      <div class="header_sub font-body12">2024년 8월 7일</div>
+                    </div>
+                    <div class="history_btn" style="float: right; position: absolute; right: 10%;">
+                      <button class="base_white_btn">삭제하기</button>
+                      <button class="base_primary_btn">결과보기</button>
+                    </div>
+                </div>
+                <div class="dropdown">질문 보기 ▼</div>
+              </div>
+            </div>
+            <div class="interview_qna_content">
+              <div class="history_content">
+                <div class="history_wrap">
+                    <div class="history_title">
+                      <div class="content_title font-body16">내가 만든 질문</div>
+                      <div class="header_sub font-body12">2024년 8월 1일</div>
+                    </div>
+                    <div class="history_btn" style="float: right; position: absolute; right: 10%;">
+                      <button class="base_white_btn">삭제하기</button>
+                      <button class="base_primary_btn">결과보기</button>
+                    </div>
+                </div>
+                <div class="dropdown">질문 보기 ▼</div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </section>
+    </div>
+  </body>
+</html>

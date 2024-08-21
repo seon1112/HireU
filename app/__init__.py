@@ -16,6 +16,12 @@ def create_app():
     from .routes.make_question_routes import make_question_bp
     app.register_blueprint(make_question_bp)
 
+    from .routes.basic_information_routes import basic_information_bp
+    app.register_blueprint(basic_information_bp)
+    
+    from .routes.history_routes import history_bp
+    app.register_blueprint(history_bp)
+
     # SQLAlchemy 초기화 코드 주석 처리
     # with app.app_context():
     #     from .models import User, AcssLog, ErrorLog, Interview, Question, Response, Report, ImageFile, VideoFile

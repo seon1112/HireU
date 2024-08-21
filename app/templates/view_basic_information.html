@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/color.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hireu.css') }}">
+  </head>
+
+  <style type="text/css">
+      .content_title{
+          justify-content: unset !important;
+      }
+      .content_title span{
+          font-weight: 500 !important;
+          margin-left: 10px;
+      }
+      textarea.search_input:not(:focus):hover {
+          border: 1px solid var(--Main-3);
+      }
+  </style>
+  
+  <body>
+
+    <header><!--dark 클래스 추가하면 어두운 header-->
+      <div class="header_box">
+          <a href="#" class="logo_image"></a>
+          <button class="font-body7">준열이형이야</button>
+      </div>    
+    </header>    
+    <div class="main_container">
+      <section class="content_container">
+        <!--sidebar-->
+        <aside class="sidebar">
+          <div class="user_container">
+            <div class="user_info_wrap">
+              <div class="user_icon_box">
+                <img>
+              </div>
+              <div class="font-body5">준열이형이야<span class="font-body9">님</span></div>
+            </div>
+            <div class="user_histroy_wrap">
+              <div class="user_histroy_box font-body13">
+                <span>면접 진행 횟수</span>
+                <span class="font-body12">731회</span>  
+              </div>              
+              <div class="user_histroy_box font-body13">
+                <span>최근 접속일</span>
+                <span class="font-body12">2024.08.18</span>  
+              </div>              
+            </div>
+          </div>
+          <div class="tab_container">
+            <button class="nav_tab people selected">기본 정보<div class="end_bar"></div></button>
+            <button class="nav_tab interview">면접 질문<div class="end_bar"></div></button>
+            <button class="nav_tab histroy">면접 히스토리<div class="end_bar"></div></button>
+            <button class="nav_tab qna">문의하기<div class="end_bar"></div></button>
+          </div>
+        </aside>
+        <!--메인-->
+        <section class="main_content">
+          <div class="interview_qna_header">
+            <div class="header_title font-headline2">기본정보</div>
+            <div class="header_sub font-body11">면접 질문은 최대 5개까지 선택 가능합니다.</div>
+          </div>
+          <div class="interview_qna_wrap">
+            <!-- 이름 -->
+            <div class="interview_qna_content">
+                <div class="content_title font-body4">이름 <span style="color:red; font-size: 14px;">* 필수사항</span></div>
+                <input class="font-body10  search_input" value="임준열" id="inp_name" style="width:200px;">
+            </div>
+            <!-- 학과 -->
+            <div class="interview_qna_content">
+                <div class="content_title font-body4">학과 ㆍ 전공 <span style="color:red; font-size: 14px;">* 필수사항</span></div>
+                <input class="font-body10  search_input" value="기계설계공학과, 컴퓨터공학과" id="inp_department">
+            </div>
+            <!-- 산업분야 -->
+            <div class="interview_qna_content" style="flex-direction: unset; align-items: center;">
+                <label for="industrial_check" class="hidden_label"></label>
+                <input type="checkbox" class="txtboxtype" id="inp_checkIndustrial">
+                <label for="industrial" class="hidden_label"></label>
+                <div class="content_title font-body4">산업분야</div>
+                <input class="font-body10  search_input" value="개발 ㆍ 데이터" id="inp_industrial">
+            </div>
+            <!-- 지원직무 -->
+            <div class="interview_qna_content" style="flex-direction: unset; align-items: center;">
+                <label for="duty_check" class="hidden_label"></label>
+                <input type="checkbox" class="txtboxtype" id="inp_checkDuty">
+                <label for="duty" class="hidden_label"></label>
+                <div class="content_title font-body4">지원직무</div>
+                <input class="font-body10  search_input" value="데이터 사이언티스트" id="inp_duty">
+            </div>
+            <!-- 자격증 -->
+            <div class="interview_qna_content">
+                <div style="flex-direction: unset; align-items: center; display: flex; gap: 19px;">
+                    <label for="certificate_check" class="hidden_label"></label>
+                    <input type="checkbox" class="txtboxtype" id="inp_checkCertificate">
+                    <label for="certificate" class="hidden_label"></label>
+                    <div class="content_title font-body4">자격증<span style="color:#9BA6B8; font-size: 14px;">보유한 기술스킬 ㆍ 자격증</span></div>
+                </div>
+                <div>
+                    <input class="font-body10  search_input" id="inp_certificate1" style="margin: 0 19px 0 39px;">
+                    <button class="base_white_btn">추가</button>
+                </div>
+                <span style="color:red; font-size: 14px; margin-left:39px;">* 입력 시 위의 기술스킬 카테고리를 정확히 적어주세요.<br>&ensp; 예시 : 정보처리기사 자격증, 컴퓨터 활용능력 1급 자격증</span>
+                <div>
+                    <span style="color:#B0B0B0; font-size: 15px; margin-left:39px;">1.</span>
+                    <input class="font-body10  search_input" value="정보처리기사 자격증" id="inp_certificate2" style="margin-left:10px;">
+                </div>
+                <div>
+                    <span style="color:#B0B0B0; font-size: 15px; margin-left:39px;">2.</span>
+                    <input class="font-body10  search_input" value="컴퓨터 활용능력 1급" id="inp_certificate3" style="margin-left:10px;">
+                </div>
+            </div>
+            <!-- 대외활동 -->
+            <div class="interview_qna_content">
+              <div style="flex-direction: unset; align-items: center; display: flex; gap: 19px;">
+                  <label for="activity_check" class="hidden_label"></label>
+                  <input type="checkbox" class="txtboxtype" id="inp_checkActivity">
+                  <label for="activity" class="hidden_label"></label>
+                  <div class="content_title font-body4">대외활동<span style="color:#9BA6B8; font-size: 14px;">프로젝트 ㆍ 인턴십 ㆍ 봉사활동</span></div>
+              </div>
+              <div>
+                  <input class="font-body10  search_input" id="inp_activity1" style="margin: 0 19px 0 39px;">
+                  <button class="base_white_btn">추가</button>
+              </div>
+              <span style="color:red; font-size: 14px; margin-left:39px;">* 입력 시 위의 대외활동 카테고리를 정확히 적어주세요.<br>&ensp; 예시 : 복지관 봉사활동 , AI 면접 프로그램 제작 프로젝트에 개발포지션 참여</span>
+              <div>
+                  <span style="color:#B0B0B0; font-size: 15px; margin-left:39px;">1.</span>
+                  <input class="font-body10  search_input" value="프로젝트" id="inp_activity2" style="margin-left:10px;">
+              </div>
+              <div>
+                  <span style="color:#B0B0B0; font-size: 15px; margin-left:39px;">2.</span>
+                  <input class="font-body10  search_input" value="대외활동" id="inp_activity3" style="margin-left:10px;">
+              </div>
+          </div>
+            <!-- 자기소개서 -->
+          <div class="interview_qna_content">
+              <div class="content_title font-body4">자기소개서<span style="color:#9BA6B8; font-size: 14px;">자기소개서나 지원서에서 강조하고 싶은 내용을 적어주세요.</span></div>
+              <textarea class="font-body10  search_input" id="inp_department" 
+              style="resize: none; border: 1px solid var(--Main-21); width: 100%; height: 500px; padding: 9px 24px 9px 24px; border-radius: 10px; background-color: var(--White); font-family: 'Noto Sans KR'; box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.1);"></textarea>
+          </div>
+        </section>
+    </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+pip install flask_sqlalchemy
+pip install pymysql
+pip install flask
+pip install pyaudio
+pip install opencv-python
