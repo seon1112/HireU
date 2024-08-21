@@ -528,7 +528,7 @@ input.txtboxtype[type="checkbox"]:checked::after {
   content:'';
   background-image:url('../images/icon/check_white.png'); /*임시 아이콘임 변경해야함*/
   background-repeat:no-repeat;
-  background-size : 14px 14px;
+  background-size : 10px 10px;
   background-position:center;
   height: 20px;
   width: 20px;
