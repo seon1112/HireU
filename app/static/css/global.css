@@ -506,6 +506,7 @@ input.txtboxtype[type="checkbox"]{
   padding: 0;
   font-family: 'Noto Sans KR';  
   border-radius: 50%; 
+  cursor: pointer;
 }
 
 input.txtboxtype[type="checkbox"]:hover {
