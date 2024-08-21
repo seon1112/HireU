@@ -76,7 +76,7 @@ div.main_container .sidebar .tab_container > button{
 
 div.main_container .main_content{
     overflow-y: auto;
-    background-color: var(--Main-24);
+    background-color: var(--White);
     border-radius: 20px;
     padding: 70px 81px;
     position: relative;
