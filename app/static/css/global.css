@@ -302,7 +302,7 @@ input:focus {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  padding: 10px 38px;
+  padding: 10px 57px;
   color: var(--White);
   background-color: var(--Main-3);
   white-space: nowrap;
@@ -340,7 +340,7 @@ input:focus {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  padding: 10px 38px;
+  padding: 10px 57px;
   color: var(--Main-3);
   background-color: var(--White);
   border: 2px solid var(--Main-3);
