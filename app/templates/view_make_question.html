@@ -55,11 +55,12 @@
           <div class="interview_qna_wrap">
             <div class="interview_qna_content">
               <div class="content_title font-body4">면접 히스토리 질문</div>
-              <div class="content_wrap">
+              <div class="content_wrap" style="align-items:center">
                 <button type="button" class="plus_btn"></button>
-                <button type="button" class="base_white_btn">면접 히스토리에서 질문리스트 불러오기</button>
+                <button type="button" class="base_white_btn question_btn">면접 히스토리에서 질문리스트 불러오기</button>
               </div>
             </div>
+
             <div class="interview_qna_content">
               <div class="content_title font-body4">기본 질문</div>
               <div class="content_wrap">
@@ -97,29 +98,219 @@
                 </div>
               </div>
             </div>
+
             <div class="interview_qna_content">
               <div class="content_title font-body4">
                 <span>AI로 나만의 질문 생성</span>
                 <div class="btn_box">
-                  <button class="base_primary_btn">내 기본정보 불러오기</button>
-                  <button class="base_white_btn">입력한 내용을 내 기본정보로 저장</button>
+                  <button type="button" class="base_primary_btn">내 기본정보 불러오기</button>
+                  <button type="button" class="base_white_btn">입력한 내용을 내 기본정보로 저장</button>
                 </div>
               </div>
               <div class="content_wrap">
+
+                <div class="qna_conent_wrap">
+
+                  <div class="space_between">
+                    <div class="select_wrap">
+                      <div class="search_input_box qna">
+                        <input type="checkbox" class="txtboxtype" id="major">
+                        <label for="major">학과 · 전공</label>
+                      </div>
+                      <select class="dropdown1">
+                        <option value="">학과 · 전공</option>
+                      </select>
+                    </div>
+                    <div class="select_wrap">
+                      <div class="search_input_box qna">
+                          <input type="checkbox" class="txtboxtype" id="industry">
+                          <label for="industry">산업분야</label>
+                      </div>
+                      <select class="dropdown1">
+                        <option value="">개발 · 데이터</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="select_wrap">
+                    <div class="search_input_box qna">
+                      <input type="checkbox" class="txtboxtype" id="industry">
+                      <label for="industry">지원직무</label>
+                    </div>
+                    <select class="dropdown1">
+                      <option value="">개발 · 데이터</option>
+                    </select>
+                  </div>
+
+                  <div class="qusetion_warp">
+                    <div class="select_wrap">
+                      <div class="search_input_box qna">
+                        <input type="checkbox" class="txtboxtype" id="industry">
+                        <label for="industry">기술 스킬</label>
+                      </div>
+                      <div class="input_wrap flex_1">
+                        <label for="technical_skills" class="hidden_label">기술 스킬</label>
+                        <input class="font-body10  search_input flex_1" value="기술스킬 · 자격증 입력" id="technical_skills">
+                        <button type="button" class="base_white_small_btn">확인</button>
+                      </div>
+                    </div>
+                    <!--추가 부분-->
+                    <div class="caution font-body11 margin_left">
+                      * 입력 시 위의 대외활동 카테고리를 정확히 적어주세요.<br>
+                      예시 ) 복지관 봉사활동 , AI 면접 프로그램 제작 프로젝트에 개발포지션 참여 
+                    </div>
+                    <div class="question_add_item_wrap margin_left">
+                      <div class="question_add_item">
+                        <div class="question_add_num">1.</div>
+                        <input class="font-body10  search_input flex_1">
+                        <div class="empty_div"></div>
+                      </div>
+                      <div class="question_add_item">
+                        <div class="question_add_num">2.</div>
+                        <input class="font-body10  search_input flex_1">
+                        <div class="empty_div"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="qusetion_warp">
+                    <div class="select_wrap">
+                      <div class="search_input_box qna">
+                        <input type="checkbox" class="txtboxtype" id="industry">
+                        <label for="industry">기술 스킬</label>
+                      </div>
+                      <div class="input_wrap flex_1">
+                        <label for="technical_skills" class="hidden_label">대외활동</label>
+                        <input class="font-body10  search_input flex_1" value="프로젝트 · 인턴십  · 봉사활동 입력" id="technical_skills">
+                        <button type="button" class="base_white_small_btn">확인</button>
+                      </div>
+                    </div>
+                    <div class="caution font-body11 margin_left">
+                      * 입력 시 위의 대외활동 카테고리를 정확히 적어주세요.<br>
+                      예시 ) 복지관 봉사활동 , AI 면접 프로그램 제작 프로젝트에 개발포지션 참여 
+                    </div>
+                    <!--추가 부분-->
+                    <div class="question_add_item_wrap margin_left">
+                      <div class="question_add_item">
+                        <div class="question_add_num">1.</div>
+                        <input class="font-body10  search_input flex_1">
+                        <div class="empty_div"></div>
+                      </div>
+                      <div class="question_add_item">
+                        <div class="question_add_num">2.</div>
+                        <input class="font-body10  search_input flex_1">
+                        <div class="empty_div"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--자기소개서-->
+                  <div class="question_textarea">
+                    <div class="search_input_box qna">
+                      <input type="checkbox" class="txtboxtype" id="industry">
+                      <label for="industry">자기소개서</label>
+                    </div>
+                    <textarea class="font-body10  textarea1" placeholder="자기소개서나 지원서에서 강조하고싶은 내용을 적어주세요. "></textarea>
+                  </div>
+                </div>
+
+                <!--버튼-->
+                <div class="middle_button_wrap">
+                  <button type="button" class="base_white_btn question_btn">AI 질문 생성하기</button> 
+                  <button type="button" class="arrow_bottom_btn"></button>
+                </div>
+
+                <!--ai 생성질문 목록-->
+                <div class="qna_list">
+                  <div class="qna_item">
+                    <label for="main_qna_check1" class="hidden_label">1번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check1">
+                    <label for="main_qna1" class="hidden_label">1번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna1" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check2" class="hidden_label">2번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check2">
+                    <label for="main_qna2" class="hidden_label">2번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna2" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check3" class="hidden_label">3번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check3">
+                    <label for="main_qna3" class="hidden_label">3번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna3" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check4" class="hidden_label">4번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check4">
+                    <label for="main_qna4" class="hidden_label">4번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna4" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check5" class="hidden_label">5번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check5">
+                    <label for="main_qna5" class="hidden_label">5번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna5" disabled>
+                  </div>
+                </div>
               </div>
             </div>
+
             <div class="interview_qna_content">
-              <div class="content_title font-body4">질문 직접 입력</div>
+              <div class="content_title font-body4">직접 질문 입력하기</div>
               <div class="content_wrap">
+                <div class="input_wrap" style="width:100%;">
+                  <label for="self" class="hidden_label">질문을 입력하세요.</label>
+                  <input class="font-body10  search_input" placeholder="질문을 입력하세요." id="self" style="width:100%;">
+                </div>
+                <!--버튼-->
+                <div class="middle_button_wrap">
+                  <button type="button" class="base_white_btn question_btn">질문 추가하기</button> 
+                  <button type="button" class="arrow_bottom_btn"></button>
+                </div>                
+                <!--직접 추가 목록-->
+                <div class="qna_list">
+                  <div class="qna_item">
+                    <label for="main_qna_check1" class="hidden_label">1번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check1">
+                    <label for="main_qna1" class="hidden_label">1번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna1" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check2" class="hidden_label">2번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check2">
+                    <label for="main_qna2" class="hidden_label">2번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna2" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check3" class="hidden_label">3번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check3">
+                    <label for="main_qna3" class="hidden_label">3번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna3" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check4" class="hidden_label">4번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check4">
+                    <label for="main_qna4" class="hidden_label">4번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna4" disabled>
+                  </div>
+                  <div class="qna_item">
+                    <label for="main_qna_check5" class="hidden_label">5번 기본 면접 질문 선택</label>
+                    <input type="checkbox" class="txtboxtype" id="main_qna_check5">
+                    <label for="main_qna5" class="hidden_label">5번 기본 면접 질문</label>
+                    <input class="font-body10  search_input" value="기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다." id="main_qna5" disabled>
+                  </div>
+                </div>                
+
               </div>
             </div>
           </div>
+
           <!--하단 고정 바-->
           <div class="fixed-action-bar">
             <div class="bar_content font-body7">5개 중 1개 선택중</div>
             <div class="bar_btn_box">
-              <button class="base_primary_large_btn">면접 시작하기</button>
-              <button class="base_white_large_btn">랜덤 질문으로 시작하기</button>
+              <button type="button" class="base_primary_btn">면접 시작하기</button>
+              <button type="button" class="base_white_btn">랜덤 질문으로 시작하기</button>
             </div>
           </div>
         </section>

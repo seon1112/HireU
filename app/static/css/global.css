@@ -296,6 +296,22 @@ input:focus {
     justify-content: center;
 }
 
+.base_primary_small_btn{
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 33px;
+    color: var(--White);
+    background-color: var(--Main-3);
+    white-space: nowrap;
+    font-family: 'Noto Sans KR';
+    min-width: 94px;
+    border-radius: 50px;
+    justify-content: center;
+}
+
 .base_primary_large_btn{
   display: inline-flex;
   align-items: center;
@@ -330,6 +346,23 @@ input:focus {
   white-space: nowrap;
   font-family: 'Noto Sans KR';
   min-width: 145px;
+  border-radius: 50px;
+  justify-content: center;
+}
+
+.base_white_small_btn{
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 33px;
+  color: var(--Main-3);
+  background-color: var(--White);
+  border: 2px solid var(--Main-3);
+  white-space: nowrap;
+  font-family: 'Noto Sans KR';
+  min-width: 94px;
   border-radius: 50px;
   justify-content: center;
 }
@@ -535,7 +568,25 @@ input.txtboxtype[type="checkbox"]:checked::after {
   width: 20px;
 }
 
+/*textarea*/
+textarea.textarea1{
+  resize: none; 
+  border: 1px solid var(--Main-21); 
+  padding: 9px 24px 9px 24px; 
+  border-radius: 10px; 
+  background-color: var(--White); 
+  font-family: 'Noto Sans KR'; 
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.1);  
+}
+
+
 /*input*/
+.search_input_box{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 input.search_input{
   border: 1px solid var(--Main-21);
   width: 600px;
@@ -562,6 +613,35 @@ input.search_input:not(:focus):hover{
 input.search_input:focus{
   border: 1px solid var(--Main-3); 
   box-shadow: 0px 2px 1px 0px rgba(68, 94, 241, 0.1);
+}
+
+/*select*/
+select.dropdown1{
+  border: 1px solid var(--Main-21);
+  background-color: var(--White);
+  color: var(--Gray-80);
+  border-radius: 10px;
+  padding: 9px 40px 9px 24px;
+  background-image: url('../images/icon/arrow_bottom.png');
+  background-size: 16px;
+  background-position: center right 24px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  font-family: 'Noto Sans KR';  
+  min-width: 322px;
+  cursor: pointer;
+}
+
+select.dropdown1:not(:focus):hover{
+  border: 1px solid var(--Main-3);
+}
+
+select.dropdown1:focus{
+  border: 1px solid var(--Main-3);
 }
 
 /*header*/
