@@ -89,18 +89,10 @@ input:focus {
 
 .font-headline3 {
   font-style: normal;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   letter-spacing: -0.02em;
   line-height: normal;
-}
-
-.font-headline4 {
-  font-style: normal;
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: 0;
-  line-height: 160%;
 }
 
 .font-body1 {
@@ -121,7 +113,7 @@ input:focus {
 
 .font-body3 {
   font-style: normal;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   letter-spacing: -0.02em;
   line-height: 140%;
@@ -130,20 +122,12 @@ input:focus {
 .font-body4 {
   font-style: normal;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 140%;
+  line-height: 140%; 
 }
 
 .font-body5 {
-  font-style: normal;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 140%;
-}
-
-.font-body6 {
   font-style: normal;
   font-size: 20px;
   font-weight: 300;
@@ -151,7 +135,7 @@ input:focus {
   line-height: 140%;
 }
 
-.font-body7 {
+.font-body6 {
   font-style: normal;
   font-size: 16px;
   font-weight: bold;
@@ -159,7 +143,7 @@ input:focus {
   line-height: 140%;
 }
 
-.font-body8 {
+.font-body7 {
   font-style: normal;
   font-size: 16px;
   font-weight: 500;
@@ -167,15 +151,7 @@ input:focus {
   line-height: 140%;
 }
 
-.font-body9 {
-  font-style: normal;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 140%;
-}
-
-.font-body10 {
+.font-body8 {
   font-style: normal;
   font-size: 15px;
   font-weight: 500;
@@ -183,7 +159,7 @@ input:focus {
   line-height: 140%;
 }
 
-.font-body11 {
+.font-body9 {
   font-style: normal;
   font-size: 14px;
   font-weight: 500;
@@ -191,60 +167,12 @@ input:focus {
   line-height: 140%;
 }
 
-.font-body12 {
-  font-style: normal;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 0.02em;
-  line-height: 140%;
-}
-
-.font-body13 {
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 140%;
-}
-
-.font-body14 {
-  font-style: normal;
-  font-size: 32px;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 160%;
-}
-
-.font-body15 {
-  font-style: normal;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 160%;
-}
-
-.font-body16 {
+.font-body10 {
   font-style: normal;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 160%;
-}
-
-.font-body17 {
-  font-style: normal;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 160%;
-}
-
-.font-body18 {
-  font-style: normal;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 160%;
+  line-height: 160%; 
 }
 
 .font-btn1 {
@@ -266,14 +194,6 @@ input:focus {
 .font-btn3 {
   font-style: normal;
   font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.font-btn4 {
-  font-style: normal;
-  font-size: 20px;
   font-weight: bold;
   letter-spacing: 0;
   line-height: normal;
@@ -705,5 +625,40 @@ header.dark .logo_image{
 }
 
 @media screen and (max-width: 768px){
+
+.font-headline1 {
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 160%;
+}
+
+.font-body2 {
+  font-style: normal;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 160%;
+}
+
+.font-body3 {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 160%;
+}
+
+.font-body6 {
+  font-style: normal;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 160%;
+}
+
+
+
 }
 
