@@ -11,7 +11,7 @@
     --Main-4   : #253871;        
     --Main-5   : #B0B0B0;   
     --Main-6   : #7A92AE;   
-    --Main-7   : #7A92AE;   
+    --Main-7   : #9BA6B8;   
     --Main-8   : #184BC3;   
     --Main-9   : #DFE4FF;   
     --Main-10  : #F3F6FF;   
@@ -31,9 +31,10 @@
     --Main-22  : #020E26;
     --Main-23  : #f5f5f5;
     --Main-24  : #fcfcfc;
+    --Main-25  : #4C6E97;
 
-    --Main-25 : rgba(0, 0, 0, 0.1);    /*border색상*/
-    --Main-26: #EAEAEA;  /*스크롤바 색깔*/
+    --Main-26 : rgba(0, 0, 0, 0.1);    /*border색상*/
+    --Main-27: #EAEAEA;  /*스크롤바 색깔*/
     --Caution:#F65151;
 
 }
