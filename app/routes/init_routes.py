@@ -5,8 +5,8 @@ from .face_recognition_routes import face_recognition_bp
 from .interview_routes import interview_bp
 from .main_routes import result_bp
 from .report_routes import mypage_bp
-from .basic_information_routes import basic_information
-from .history_routes import history
+from .basic_information_routes import basic_information_bp
+from .history_routes import history_bp
 
 def init_routes(app):
     app.register_blueprint(main_bp)

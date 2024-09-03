@@ -22,6 +22,9 @@ def create_app():
     from .routes.history_routes import history_bp
     app.register_blueprint(history_bp)
 
+    from .routes.main_routes import main_bp
+    app.register_blueprint(main_bp)
+
     # SQLAlchemy 초기화 코드 주석 처리
     # with app.app_context():
     #     from .models import User, AcssLog, ErrorLog, Interview, Question, Response, Report, ImageFile, VideoFile
