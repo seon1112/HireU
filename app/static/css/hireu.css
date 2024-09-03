@@ -12,13 +12,11 @@ div.main_container{
 
 div.main_container .content_container{
     position: relative;
-    width: 100%;
-    max-width: 1462px;
     margin: 20px auto;
     gap:30px;
     display: grid;
     grid-template-columns: 227px 1fr;
-    flex:1;
+    justify-content: center;
 }
 
 div.main_container .sidebar{
@@ -31,7 +29,6 @@ div.main_container .sidebar .sidebar_wrap{
     gap:40px;
     position: sticky;
     top: 20px; 
-    height: 500px;
     background-color: var(--White);
     padding-block: 30px;
     border-radius: 20px;
@@ -277,7 +274,8 @@ div.select_wrap{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 15px;;
+    margin-top: 15px;
+    margin-bottom: 35px;
 }
 
 .question_add_item_wrap .question_add_item{
