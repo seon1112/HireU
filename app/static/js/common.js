@@ -1,10 +1,8 @@
 $(function() {
   // 모달 열기 버튼을 클릭하면 해당 모달을 보여줌
   $(".open_modal").click(function() {
-    console.log("???");
     const modalId = $(this).data("modal");  
     $("#" + modalId).show();
-    console.log(modalId);
     openModal();
   });
 

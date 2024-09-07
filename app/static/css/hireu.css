@@ -304,6 +304,84 @@ div.select_wrap{
     width:324px;
 }
 
+.modal_content.modal2{
+    padding: 52px 85px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.modal_content .history_modal_content_wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    flex-grow: 1; 
+    justify-content: space-between;
+    height: 100%;
+}
+
+.modal_content .history_modal_content_wrap .history_modal_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 41px;
+    flex-grow: 1;
+    align-self: stretch;
+}
+
+.modal_content .history_modal_content_wrap .history_modal_content .history_modal_title_wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal_content .history_modal_content_wrap .history_modal_content .history_modal_content_box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto; 
+    align-self: stretch;
+    padding-right: 10px;
+    max-height: 538px;
+}
+
+.history_modal_content_box .history_item_box{
+    border: 1px solid var(--Main-21);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history_modal_content_box .history_item_box .show_question{
+    color: var(--Main-14);
+}
+
+.history_modal_content_box::-webkit-scrollbar {
+    width: 9px;
+    height: 12px; 
+}
+
+.history_modal_content_box:-webkit-scrollbar-track {
+    background-color: var(--Main-26); 
+    border-radius: 10px; 
+}
+
+.history_modal_content_box::-webkit-scrollbar-thumb {
+    background-color: var(--Main-25);
+    border-radius: 50px; 
+}
+
+.history_modal_content_box::-webkit-scrollbar-thumb:hover {
+    background-color:  var(--Main-20);
+}
+
+
 @media screen and (max-width: 768px){
     div.main_container .content_container{
         margin:10px;
