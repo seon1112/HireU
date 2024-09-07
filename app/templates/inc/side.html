@@ -19,10 +19,10 @@
         </div>
       </div>
       <div class="tab_container">
-        <button class="nav_tab people">기본 정보<div class="end_bar"></div></button>
-        <button class="nav_tab interview selected">면접 질문<div class="end_bar"></div></button>
-        <button class="nav_tab histroy">면접 히스토리<div class="end_bar"></div></button>
-        <button class="nav_tab qna">문의하기<div class="end_bar"></div></button>
+        <a href="/basic_information" class="nav_tab people {% if request.path == '/basic_information' %}selected{% endif %}">기본 정보<div class="end_bar"></div></a>
+        <a href="/make_question" class="nav_tab interview {% if request.path == '/make_question' %}selected{% endif %}">면접 질문<div class="end_bar"></div></a>
+        <a href="/history" class="nav_tab histroy {% if request.path == '/history' %}selected{% endif %}">면접 히스토리<div class="end_bar"></div></a>
+        <a class="nav_tab qna">문의하기<div class="end_bar"></div></a>
       </div>
     </div>
   </aside>

@@ -67,8 +67,9 @@ div.main_container .sidebar .user_container .user_histroy_wrap .user_histroy_box
     color: var(--Main-20);
 }
 
-div.main_container .sidebar .tab_container > button{
-    width: 100%;
+div.main_container .sidebar .tab_container > a{
+    display: flex;
+    align-items: center;
 }
 
 div.main_container .main_content{
