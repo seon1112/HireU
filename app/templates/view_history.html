@@ -62,42 +62,11 @@
   </style>
   
   <body>
-
-    <header><!--dark 클래스 추가하면 어두운 header-->
-      <div class="header_box">
-          <a href="#" class="logo_image"></a>
-          <button class="font-body7">준열이형이야</button>
-      </div>    
-    </header>    
+    {% include 'inc/header.html' %}
     <div class="main_container">
       <section class="content_container">
         <!--sidebar-->
-        <aside class="sidebar">
-          <div class="user_container">
-            <div class="user_info_wrap">
-              <div class="user_icon_box">
-                <img>
-              </div>
-              <div class="font-body5">준열이형이야<span class="font-body9">님</span></div>
-            </div>
-            <div class="user_histroy_wrap">
-              <div class="user_histroy_box font-body13">
-                <span>면접 진행 횟수</span>
-                <span class="font-body12">731회</span>  
-              </div>              
-              <div class="user_histroy_box font-body13">
-                <span>최근 접속일</span>
-                <span class="font-body12">2024.08.18</span>  
-              </div>              
-            </div>
-          </div>
-          <div class="tab_container">
-            <button class="nav_tab people">기본 정보<div class="end_bar"></div></button>
-            <button class="nav_tab interview">면접 질문<div class="end_bar"></div></button>
-            <button class="nav_tab histroy selected">면접 히스토리<div class="end_bar"></div></button>
-            <button class="nav_tab qna">문의하기<div class="end_bar"></div></button>
-          </div>
-        </aside>
+        {% include 'inc/side.html' %}
         <!--메인-->
         <section class="main_content">
           <div class="interview_qna_header">
