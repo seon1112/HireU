@@ -3,15 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <title>Main</title>
-    <link rel="stylesheet" href="../static/css/color.css">
-    <link rel="stylesheet" href="../static/css/global.css">
+    {% include 'inc/import.html' %}
     <link rel="stylesheet" href="../static/css/hireu.css">
     <link rel="stylesheet" href="../static/css/main.css">
-
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="../static/js/owl.carousel.min.js"></script>
     <script src="../static/js/main.js"></script>
   </head>
@@ -72,7 +68,7 @@
           </div>
           <div class="mainpage_btn">
             <button type="button" class="main_square_btn2 font-btn1">문의하기</button>
-            <button type="button" class="main_square_btn1 font-btn1" id="btn_login">시작하기</button>
+            <button type="button" class="open_modal main_square_btn1 font-btn1" data-modal="loginModal">시작하기</button>
           </div>
         </div><!--content_1 hireu main-->
         <div class="content_2">
@@ -144,17 +140,6 @@
             당신의 미래를 위한 새로운 도전을 HireU팀이 응원합니다.</div>
         </div><!--brand-->
       </div><!--mainpage_content_container-->
-      <!-- 모달 -->
-      <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-close">
-              <span class="close">&times;</span>
-            </div>
-            <img src="../static/images/logo_blue.png" style="margin-top: 10px;"/>
-            <p>간편하게<br>카카오로 로그인 / 회원가입 하세요!</p>
-            <img src="../static/images/kakao_btn.png" alt="kakao oauth" class="kakaoButton"/>
-        </div>
-      </div>
     </section>
     <footer>
       <ul class="footer_list">
@@ -173,16 +158,16 @@
       </ul>
       <div class="up"></div>
     </footer>
-    <script>
-      $(document).ready(function(){
-          $("#btn_login").click(function(){
-              $("#loginModal").show();
-          });
-
-          $(".close").click(function(){
-              $("#loginModal").hide();
-          });
-      });
-    </script>
   </body>
+  <!-- 모달 -->
+  <div id="loginModal" class="modal">
+    <div class="modal_content modal1">
+        <div class="modal_close">
+          <span class="close">&times;</span>
+        </div>
+        <img src="../static/images/logo_blue.png" style="margin-top: 10px;"/>
+        <p>간편하게<br>카카오로 로그인 / 회원가입 하세요!</p>
+        <img src="../static/images/kakao_btn.png" alt="kakao oauth" class="kakaoButton"/>
+    </div>
+  </div>  
 </html> 

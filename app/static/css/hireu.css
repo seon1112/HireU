@@ -72,7 +72,7 @@ div.main_container .sidebar .tab_container > a{
     align-items: center;
 }
 
-div.main_container .main_content{
+div.main_container .content_container .main_content{
     overflow-y: auto;
     background-color: var(--White);
     border-radius: 20px;
@@ -81,23 +81,35 @@ div.main_container .main_content{
     width: 1205px;
 }
 
-div.main_container .main_content::-webkit-scrollbar {
-    width: 9px;
-    height: 12px; 
+.fixed-action-bar {
+    position: fixed;
+    bottom: 53px; 
+    left: calc(50% + 140px);
+    transform: translateX(-50%);
+    background-color: var(--White); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
+    padding: 15px 30px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 15px; 
+    z-index: 10;
+    width: 100%;   
+    max-width: 785px;
+    border-radius: 20px;
 }
 
-div.main_container .main_content::-webkit-scrollbar-track {
-    background-color: var(--Main-26); 
-    border-radius: 10px; 
+.fixed-action-bar .bar_content {
+    margin : 0px 50px; 
+    color: var(--Main-0 );
 }
 
-div.main_container .main_content::-webkit-scrollbar-thumb {
-    background-color: var(--Main-25);
-    border-radius: 50px; 
-}
-
-div.main_container .main_content::-webkit-scrollbar-thumb:hover {
-    background-color:  var(--Main-20);
+.fixed-action-bar .bar_btn_box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .main_content .interview_qna_wrap{
@@ -140,36 +152,6 @@ div.main_container .main_content::-webkit-scrollbar-thumb:hover {
     gap: 19px;
     justify-content: center;
     align-items: flex-start;
-}
-
-.fixed-action-bar {
-    position: fixed;
-    bottom: 53px; 
-    left : 50%;
-    transform: translateX(-50%);
-    background-color: var(--White); 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
-    padding: 15px 30px; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    align-items: center;
-    gap: 15px; 
-    z-index: 1000;
-    max-width: 785px;
-    border-radius: 20px;
-}
-
-.fixed-action-bar .bar_content {
-    margin : 0px 50px; 
-    color: var(--Main-0 );
-}
-
-.fixed-action-bar .bar_btn_box {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
 }
 
 .start-interview {

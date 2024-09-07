@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Main</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/color.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    {% include 'inc/import.html' %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/hireu.css') }}">
   </head>
   
@@ -23,10 +22,10 @@
           <div class="interview_qna_wrap">
             <div class="interview_qna_content">
               <div class="content_title font-body4">면접 히스토리 질문</div>
-              <div class="content_wrap" style="align-items:center">
-                <button type="button" class="plus_btn"></button>
-                <button type="button" class="base_white_btn question_btn">면접 히스토리에서 질문리스트 불러오기</button>
-              </div>
+              <button class="content_wrap open_modal" style="align-items:center" data-modal="historyModal">
+                <div type="button" class="plus_btn"></div>
+                <div type="button" class="base_white_btn question_btn">면접 히스토리에서 질문리스트 불러오기</div>
+              </button>
             </div>
 
             <div class="interview_qna_content">
@@ -283,7 +282,15 @@
           </div>
         </section>
     </section>
+  </div>
+  
+</body>
+<!-- 모달 -->
+<div id="historyModal" class="modal">
+  <div class="modal_content modal2">
+    <div class="modal_close">
+      <span class="close">&times;</span>
     </div>
-
-  </body>
+  </div>
+</div>
 </html>
