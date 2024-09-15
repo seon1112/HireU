@@ -166,7 +166,7 @@ div.main_container .content_container .main_content{
 }
 
 .plus_btn{
-    background-image: ('../images/icon/plus.png');url
+    background-image: url('../images/icon/plus.png');
     width: 30px;
     height: 30px;
     background-position: center;
