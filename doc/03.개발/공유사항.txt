@@ -11,3 +11,5 @@ pip install flask
 pip install pyaudio
 pip install opencv-python
 
+-jwt 라이브러리 
+pip install Flask-JWT-Extended
