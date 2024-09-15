@@ -1,0 +1,25 @@
+$(function() {
+  $(".history_item_wrap").click(function(){
+    var question_list=$(this).closest(".history_item_box").find(".question_list");
+    if(question_list.hasClass("show")){
+      question_list.removeClass("show");
+    }else{
+      question_list.addClass("show");
+    }
+  });
+
+  $("#start_question_btn").click(function(){
+    /*
+    체크박스 선택 여부 확인하는 코드 추가 필요
+    1개 이하면 체크박스를 1가지 이상 선택해주세요
+    */
+    $("#questionCheckModal").show();
+    openModal();
+  });
+
+  $("#close_check_question_btn").click(function(){
+    $("#questionCheckModal").hide();
+    closeModal();
+  });
+
+});

@@ -663,8 +663,14 @@ header.dark .logo_image{
 
 .modal_content.modal2{
   width: 848px;
-  height: 830px;  
+  min-height: 830px;  
 }
+
+.modal_content.modal3{
+  width: 965px;
+  min-height: 715px;  
+}
+
 
 .modal_close{
   width: 100%;

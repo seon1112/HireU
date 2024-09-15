@@ -5,6 +5,7 @@
     <title>Main</title>
     {% include 'inc/import.html' %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/hireu.css') }}">
+    <script src="{{ url_for('static', filename='js/make_question.js') }}"></script>
   </head>
   
   <body>
@@ -276,7 +277,7 @@
           <div class="fixed-action-bar">
             <div class="bar_content font-body7">5개 중 1개 선택중</div>
             <div class="bar_btn_box">
-              <button type="button" class="base_primary_btn" style="width:240px;">면접 시작하기</button>
+              <button type="button" class="base_primary_btn" style="width:240px;" id="start_question_btn">면접 시작하기</button>
               <button type="button" class="base_white_btn" style="width:240px;">랜덤 질문으로 시작하기</button>
             </div>
           </div>
@@ -285,10 +286,10 @@
   </div>
   
 </body>
-<!-- 모달 -->
+<!--historyModal 모달 -->
 <div id="historyModal" class="modal">
   <div class="modal_content modal2">
-    <div class="history_modal_content_wrap">
+    <div class="question_modal_content_wrap">
       <div class="history_modal_content">
         <div class="history_modal_title_wrap">
           <div class="font-headline2">면접 히스토리</div>
@@ -296,38 +297,144 @@
             질문보기를 누른 후 선택하세요.</div>
         </div>
         <div class="history_modal_content_box">
+          <!--history_item_box-->
           <div class="history_item_box">
-            <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
-            <button class="font-body7 show_question">질문보기</button>
+            <div class="history_item_wrap">
+              <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
+              <button class="font-body7 show_question">질문보기</button>
+            </div>
+            <!--question list-->
+            <div class="question_list font-body8">
+              <div class="question_item">
+                <div class="number">1.</div>
+                <div class="title">첫번째 면접 질문입니다.첫번째 면접 질문입니다.</div>
+                <label for="history_qna_check1" class="hidden_label"></label>
+                <input type="checkbox" class="txtboxtype" id="history_qna_check1">
+              </div>
+              <div class="question_item ">
+                <div class="number">2.</div>
+                <div class="title">첫번째 면접 질문입니다.첫번째 면접 질문입니다.첫번째 면접 질문입니다.첫번째 면접 질문입니다.</div>
+                <label for="history_qna_check1" class="hidden_label"></label>
+                <input type="checkbox" class="txtboxtype" id="history_qna_check1">
+              </div>
+            </div>
+            <!--question list end-->
           </div>
+          <!--history_item_box end-->
+          <!--history_item_box-->
           <div class="history_item_box">
-            <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
-            <button class="font-body7 show_question">질문보기</button>
+            <div class="history_item_wrap">
+              <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
+              <button class="font-body7 show_question">질문보기</button>
+            </div>
+            <!--question list-->
+            <div class="question_list font-body8">
+              <div class="question_item">
+                <div class="number">1.</div>
+                <div class="title">첫번째 면접 질문입니다.첫번째 면접 질문입니다.</div>
+                <label for="history_qna_check1" class="hidden_label"></label>
+                <input type="checkbox" class="txtboxtype" id="history_qna_check1">
+              </div>
+              <div class="question_item ">
+                <div class="number">2.</div>
+                <div class="title">첫번째 면접 질문입니다.첫번째 면접 질문입니다.첫번째 면접 질문입니다.첫번째 면접 질문입니다.</div>
+                <label for="history_qna_check1" class="hidden_label"></label>
+                <input type="checkbox" class="txtboxtype" id="history_qna_check1">
+              </div>
+            </div>
+            <!--question list end-->
           </div>
+          <!--history_item_box end-->
+          <!--history_item_box-->
           <div class="history_item_box">
-            <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
-            <button class="font-body7 show_question">질문보기</button>
+            <div class="history_item_wrap">
+              <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
+              <button class="font-body7 show_question">질문보기</button>
+            </div>
+            <!--question list-->
+            <div class="question_list font-body8">
+              <div class="question_item">
+                <div class="number">1.</div>
+                <div class="title">첫번째 면접 질문입니다.첫번째 면접 질문입니다.</div>
+                <label for="history_qna_check1" class="hidden_label"></label>
+                <input type="checkbox" class="txtboxtype" id="history_qna_check1">
+              </div>
+              <div class="question_item ">
+                <div class="number">2.</div>
+                <div class="title">첫번째 면접 질문입니다.첫번째 면접 질문입니다.첫번째 면접 질문입니다.첫번째 면접 질문입니다.</div>
+                <label for="history_qna_check1" class="hidden_label"></label>
+                <input type="checkbox" class="txtboxtype" id="history_qna_check1">
+              </div>
+            </div>
+            <!--question list end-->
           </div>
+          <!--history_item_box end-->
+          <!--history_item_box-->
           <div class="history_item_box">
-            <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
-            <button class="font-body7 show_question">질문보기</button>
+            <div class="history_item_wrap">
+              <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
+              <button class="font-body7 show_question">질문보기</button>
+            </div>
+            <!--question list-->
+            <div class="question_list font-body8">
+              <div class="question_item">
+                <div class="number">1.</div>
+                <div class="title">첫번째 면접 질문입니다.첫번째 면접 질문입니다.</div>
+                <label for="history_qna_check1" class="hidden_label"></label>
+                <input type="checkbox" class="txtboxtype" id="history_qna_check1">
+              </div>
+              <div class="question_item ">
+                <div class="number">2.</div>
+                <div class="title">첫번째 면접 질문입니다.첫번째 면접 질문입니다.첫번째 면접 질문입니다.첫번째 면접 질문입니다.</div>
+                <label for="history_qna_check1" class="hidden_label"></label>
+                <input type="checkbox" class="txtboxtype" id="history_qna_check1">
+              </div>
+            </div>
+            <!--question list end-->
           </div>
-          <div class="history_item_box">
-            <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
-            <button class="font-body7 show_question">질문보기</button>
-          </div>
-          <div class="history_item_box">
-            <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
-            <button class="font-body7 show_question">질문보기</button>
-          </div>
-          <div class="history_item_box">
-            <div class="history_item_title font-body6">2024년 7월 20일의 면접</div>
-            <button class="font-body7 show_question">질문보기</button>
-          </div>
+          <!--history_item_box end-->
+
         </div>
       </div>
       <button type="button" class="base_white_small_btn">질문 불러오기</button>
     </div>
   </div>
 </div>
+<!--historyModal 모달 end-->
+
+
+<!--questionCheckModal 모달-->
+<div id="questionCheckModal" class="modal">
+  <div class="modal_content modal3">
+    <div class="question_modal_content_wrap">
+      <div class="history_modal_content">
+        <div class="history_modal_title_wrap">
+          <div class="font-headline2">선택한 질문 확인</div>
+        </div>
+
+        
+        <div class="check_question_wrap font-body7">
+          <div class="check_question_list">
+            <div class="check_question_item">위의 질문을 확인 후 면접을 시작해주세요.</div>
+            <div class="check_question_item">위의 질문을 확인 후 면접을 시작해주세요.</div>
+            <div class="check_question_item">위의 질문을 확인 후 면접을 시작해주세요.</div>
+            <div class="check_question_item">위의 질문을 확인 후 면접을 시작해주세요.</div>
+            <div class="check_question_item">위의 질문을 확인 후 면접을 시작해주세요.위의 질문을 확인 후 면접을 시작해주세요.위의 질문을 확인 후 면접을 시작해주세요.</div>
+          </div>
+          
+          <span>위의 질문을 확인 후 면접을 시작해주세요.</span>
+        </div>
+
+        <div class="check_question_btn_wrap">
+          <button type="button" class="base_white_small_btn" id="close_check_question_btn">취소하기</button>
+          <button type="button" class="base_primary_small_btn">면접 시작하기</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--questionCheckModal 모달 end-->
+
 </html>
+

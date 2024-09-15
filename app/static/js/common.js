@@ -20,13 +20,14 @@ $(function() {
     }
   });
 
-  // 모달을 열 때
-  function openModal() {
-    $("body").css("overflow", "hidden");  
-  }
-
-  // 모달을 닫을 때
-  function closeModal() {
-    $("body").css("overflow", "");  
-  }
 });
+
+// 모달을 열 때
+function openModal() {
+  $("body").css("overflow", "hidden");  
+}
+
+// 모달을 닫을 때
+function closeModal() {
+  $("body").css("overflow", "");  
+}
