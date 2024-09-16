@@ -167,14 +167,6 @@ input:focus {
   line-height: 140%;
 }
 
-.font-body10 {
-  font-style: normal;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 160%; 
-}
-
 .font-btn1 {
   font-style: normal;
   font-size: 20px;
@@ -198,7 +190,6 @@ input:focus {
   letter-spacing: 0;
   line-height: normal;
 }
-
 /*button*/
 .base_primary_btn{
     display: inline-flex;
@@ -310,20 +301,20 @@ input:focus {
 }
 
 .main_square_btn1{
-    display: inline-flex;
-    padding: 43px 89px;
-    background-color:var(--White-90);
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    color: var(--Main-8);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: auto;
-    cursor: pointer;
-    white-space: nowrap;
-    font-family: 'Noto Sans KR';    
+  display: inline-flex;
+  padding: 21px 89px;
+  background-color:var(--White-90);
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: var(--Main-8);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: auto;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Noto Sans KR';    
 }
 
 .main_square_btn1:hover{
@@ -332,20 +323,20 @@ input:focus {
 }
 
 .main_square_btn2{
-    display: inline-flex;
-    padding: 43px 89px;
-    background-color:var(--White-40);
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    color: var(--White);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: auto;
-    cursor: pointer;
-    white-space: nowrap;
-    font-family: 'Noto Sans KR';    
+  display: inline-flex;
+  padding: 21px 89px;
+  background-color:var(--White-40);
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: var(--White);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: auto;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Noto Sans KR';    
 }
 
 .main_square_btn2:hover{
@@ -695,39 +686,64 @@ header.dark .logo_image{
 
 @media screen and (max-width: 768px){
 
-.font-headline1 {
-  font-style: normal;
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: 0;
-  line-height: 160%;
-}
-
-.font-body2 {
-  font-style: normal;
-  font-size: 32px;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 160%;
-}
-
-.font-body3 {
-  font-style: normal;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 160%;
-}
-
-.font-body6 {
-  font-style: normal;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 160%;
-}
-
-
-
-}
-
+  header{
+    padding: 18px 30px ;
+  }
+  
+  header.dark{
+    padding: 0px 30px ;
+  }
+  
+  .main_square_btn1{
+    padding: 23px 73px;
+  }
+  
+  .main_square_btn2{
+    padding: 23px 73px;
+  }
+  
+  .font-headline1 {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 160%;
+  }
+  
+  .font-body1 {
+    font-style: normal;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 160%;
+  }
+  
+  .font-body3 {
+    font-style: normal;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 160%;
+  }
+  
+  .font-body5 {
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 160%; 
+  }
+  
+  .font-body6 {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 160%;
+  }
+  
+  
+  
+  }
+  
+  
