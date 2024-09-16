@@ -1,16 +1,34 @@
 $(function(){
 
-  //slider
-    $('.owl-carousel').owlCarousel({
+    //slider
+    $('.slider').owlCarousel({
     center: false,
     loop:false,
     margin:24,
     nav:false,
     responsive:{
       0:{
+          items:1
+      },
+      768:{
           items:4
-      }}
+      }
+    }
     });
+
+    $('.report_slider').owlCarousel({
+      item:2,
+      center: true,
+      loop:false,
+      margin:30,
+      nav:true,
+/*       responsive:{
+        0:{
+            items:2
+        }
+      } */
+      });
+
 
     // # 시작 함수
     // 해당파일제일 최하단에 실행함수 존재함.

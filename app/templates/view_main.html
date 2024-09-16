@@ -6,15 +6,25 @@
     {% include 'inc/import.html' %}
     <link rel="stylesheet" href="../static/css/hireu.css">
     <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/global.css">
+    <link rel="stylesheet" href="../static/css/color.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="../static/js/owl.carousel.min.js"></script>
     <script src="../static/js/main.js"></script>
   </head>
   
   <body>
     {% include 'inc/header_dark.html' %}
-    <section class="wrap">
+    <header class="dark"><!--dark 클래스 추가하면 어두운 header-->
+      <div class="header_box">
+          <a href="#" class="logo_image"></a>
+          <button class="font-body7">행복한 고냥이</button>
+      </div>    
+    </header>
+    <div class="wrap">
       <div class="back_animation">
         <div class="bgimg"></div>
         <ul class="ani">
@@ -52,9 +62,9 @@
           </li>
       </ul>
       </div>
-      <div class="mainpage_content_container">
+      <section class="mainpage_content_container">
         <div class="content_1">
-          <div class="mobile_text">
+          <div class="mobile_text font-body2">
             하나뿐인 맞춤질문,</br>
             나만의 질문 만들기로</br>
             편하고 똑똑하게 AI 면접 연습!
@@ -68,18 +78,29 @@
           </div>
           <div class="mainpage_btn">
             <button type="button" class="main_square_btn2 font-btn1">문의하기</button>
-            <button type="button" class="open_modal main_square_btn1 font-btn1" data-modal="loginModal">시작하기</button>
+            <button type="button" class="main_square_btn1 font-btn1">시작하기</button>
+          </div>
+          <div class="mobile_text2 font-body10">
+            * 본 페이지는 PC환경에 적합합니다.</br>
+            PC로 접속해 이용해주세요.
+          </div>
+          <div class="mobile_arrow">
+            <img src="../static/images/icon/mobile_arrow_down.svg" alt="">
           </div>
         </div><!--content_1 hireu main-->
         <div class="content_2">
           <div class="mainpage_text">
             <h3 class="font-headline1">AI INTERVIEW</h3>
-            <div class="font-body4">AI로 면접 질문을 생성할 수 있으며 기본 면접과 심층 면접까지 가능합니다.</div>
-            <div class="font-body4">원하는 면접 질문을 만들어 나만을 위한 AI 면접관을 만나보세요.</div>
+            <div class="font-body4">AI로 면접 질문을 생성할 수 있으며<br class="mobile_text">
+              기본 면접과 심층 면접까지 가능합니다.
+            </div>
+            <div class="font-body4">원하는 면접 질문을 만들어<br class="mobile_text">
+              나만을 위한 AI 면접관을 만나보세요.
+            </div>
           </div>
-          <div class="owl-carousel owl-theme owl-loaded slider">
+          <div class="owl-carousel owl-theme owl-loaded slider pc_slider">
             <div class="owl-stage-outer">
-              <div class="owl-stage">
+              <div class="owl-stage" id="hide">
                 <div class="owl-item">
                   <img src="../static/images/slider_example.png" alt="">
                   <p class="font-body4">마이크테스트</p>
@@ -112,7 +133,41 @@
                 </div><!--7 / none-->
               </div>
             </div>
-          </div><!--owl slider-->
+          </div><!--owl slider / PC-->
+          <div class="owl-carousel owl-theme owl-loaded slider mobile_slider">
+            <div class="owl-stage-outer">
+              <div class="owl-stage" id="hide">
+                <div class="owl-item">
+                  <img src="../static/images/slider_example.png" alt="">
+                  <p class="font-body4">마이크테스트</p>
+                </div><!--1-->
+                <div class="owl-item">
+                  <img src="../static/images/slider_example.png" alt="">
+                  <p class="font-body4">안면인식</p>
+                </div><!--2-->
+                <div class="owl-item">
+                  <img src="../static/images/slider_example.png" alt="">
+                  <p class="font-body4">질문하기</p>
+                  <p class="font-body7">15초동안 화면에 질문이 띄워집니다.</p>
+                </div><!--3-->
+                <div class="owl-item">
+                  <img src="../static/images/slider_example.png" alt="">
+                  <p class="font-body4">답변하기</p>
+                  <p class="font-body7">30초동안 답변시간이 제공됩니다.</p>
+                </div><!--4-->
+                <div class="owl-item">
+                  <img src="../static/images/slider_example.png" alt="">
+                  <p class="font-body4">AI 면접 결과 도출</p>
+                  <p class="font-body7">AI 레포트가 생성되며</br>면접 결과에 대한 분석내용이 들어갑니다.</p>
+                </div><!--5-->
+                <div class="owl-item">
+                  <img src="../static/images/slider_example.png" alt="">
+                  <p class="font-body4">히스토리</p>
+                  <p class="font-body7">면접 결과를 한눈에 비교할 수 있어</br>면접 태도 개선에 효과적입니다.</p>
+                </div><!--6-->
+              </div>
+            </div>
+          </div><!--owl slider / mobile-->
         </div><!--content_2 interview-->
         <div class="content_3">
           <div class="mainpage_text">
@@ -120,10 +175,22 @@
             <div class="font-body4">AI로 면접 결과 보고서를 만들어 드립니다.</div>
             <div class="font-body4">빠르고 편리하게 장단점을 한눈에 파악해 연습해보세요.</div>
           </div>
-          <div class="report_img">
+          <div class="report_img pc_slider">
             <img src="../static/images/main_1.png" alt="개별보고서">
             <img src="../static/images/main_1.png" alt="종합보고서">
           </div>
+          <div class="owl-carousel owl-theme owl-loaded report_slider mobile_slider">
+            <div class="owl-stage-outer">
+              <div class="owl-stage" id="hide">
+                <div class="owl-item">
+                  <img src="../static/images/main_1.png" alt="">
+                </div><!--1-->
+                <div class="owl-item">
+                  <img src="../static/images/main_2.png" alt="">
+                </div><!--2-->
+              </div>
+            </div>
+          </div><!--owl slider / mobile-->
           <div class="report_text">
             <div class="font-body4">개별보고서 · 종합보고서</div>
             <div class="font-body7">개별보고서는 질문마다 개별적으로 확인이 가능하여</br>
@@ -133,30 +200,38 @@
             </div>
           </div>
         </div><!--content_3 report-->
+      </section>
+      <section class="mainpage_content_container2">
         <div class="content_4">
-          <div class="font-body1"> " AI가 당신의 면접을 완벽하게 준비합니다. "</div>
-          <div class="font-body6">HireU에서 맞춤형 질문과</br>
+          <div class="font-body1"> " AI가 당신의 면접을<br class="mobile_text">
+            완벽하게 준비합니다. "
+          </div>
+          <div class="font-body5">HireU에서 맞춤형 질문과</br>
             정확한 피드백으로 성공적인 면접을 경험하세요.</br>
-            당신의 미래를 위한 새로운 도전을 HireU팀이 응원합니다.</div>
+            당신의 미래를 위한 새로운 도전을<br class="mobile_text">
+            HireU팀이 응원합니다.
+          </div>
         </div><!--brand-->
-      </div><!--mainpage_content_container-->
-    </section>
+      </section>
+    </div>
     <footer>
-      <ul class="footer_list">
-        <li>
-          <a href="#"><h2 class="font-headline5">HIUREU</h2></a>
-        </li>
-        <li>
-          <a href="#" class="font-body7">이용약관</a>
-        </li>
-        <li>
-          <a href="#" class="font-body7">개인정보처리방침</a>
-        </li>
-        <li>
-          <a href="#" class="font-body7">이메일</a>
-        </li>
-      </ul>
-      <div class="up"></div>
+      <div class="footer_wrap">
+        <ul class="footer_list">
+          <li>
+            <a href="#"><h2 class="font-body7">HIUREU</h2></a>
+          </li>
+          <li>
+            <a href="#" class="font-body7">이용약관</a>
+          </li>
+          <li>
+            <a href="#" class="font-body7">개인정보처리방침</a>
+          </li>
+          <li>
+            <a href="#" class="font-body7">이메일</a>
+          </li>
+        </ul>
+        <div class="up"></div>
+      </div>
     </footer>
   </body>
   <!-- 모달 -->
