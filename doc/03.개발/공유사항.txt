@@ -12,7 +12,8 @@ pip install pyaudio
 pip install opencv-python
 
 -카카오르그인을 위한 라이브러리 (240915)
+pip install flask
 pip install Flask-JWT-Extended
 pip install requests
 pip install tinydb
-
+pip install -r requirements.txt
