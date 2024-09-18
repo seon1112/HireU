@@ -47,6 +47,9 @@ def create_app():
     from .routes.user_routes import user_bp
     app.register_blueprint(user_bp)
 
+    from .routes.report_routes import report_bp
+    app.register_blueprint(report_bp)
+
     # SQLAlchemy 초기화 코드 주석 처리
     # with app.app_context():
     #     from .models import User, AcssLog, ErrorLog, Interview, Question, Response, Report, ImageFile, VideoFile

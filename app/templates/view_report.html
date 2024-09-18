@@ -3,8 +3,235 @@
   <head>
     <meta charset="UTF-8">
     <title>Main</title>
+    {% include 'inc/import.html' %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/hireu.css') }}">
   </head>
+  <style type="text/css">
+    .title_report{
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+    }
+    .title_report img{
+      width: 136px;
+      margin: 0 30px 0 40px;
+    }
+    .title_report span{
+      margin-top: 12px;
+      color: #3E4A6D;
+    }
+    .container_report{
+      min-height: 700px;
+      background-color: var(--Main-23);
+      padding-bottom: 50px;
+    }
+    .main_report{
+      margin: 0 130px 0 426.5px;
+      display: grid;
+      gap: 30px;
+      display: grid;
+      justify-content: center;
+      position: relative;
+      grid-template-columns: 1fr 250px;
+    }
+    .content_report{
+      min-height: 590px;
+      background : #e5eefb;
+      display: flex;
+      flex-direction: column;
+      padding: 70px;
+      gap: 30px;
+    }
+    .element_report .component{
+      border-radius: 10px;
+      background: white;
+      padding: 20px;
+    }
+    .element_report{
+      width: 100%;
+    }
+    .element_report span{
+      color: #3E4A6D;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .myScreen_report {
+      float: left;
+      width: 320px;
+      height: 220px;
+      padding: 0 !important;
+    }
+    .myScreen_report img{
+      width: 100%; 
+      height: 100%;
+    }
+    .questionList_report {
+      float: right;
+      width: 550px;
+      height: 220px;
+      overflow-y: scroll;
+      padding: 0 !important;
+    }
+    /* 스크롤바 */
+    .questionList_report::-webkit-scrollbar {
+      width: 10px;  
+    }
+    .questionList_report::-webkit-scrollbar-thumb {
+      background: var(--Main-15);
+      border-radius: 10px;
+    }
+    .questionList_report::-webkit-scrollbar-track {
+      background: rgba(19, 141, 211, 0.1);
+    }
+    .question_report {
+      height: 100px;
+      border-bottom: 2px solid #c3c3c3;
+      padding: 20px;
+    }
+    .questionList_report div:last-child {
+      border-bottom: none;
+    }
+    .text-center{
+      text-align: center;
+    }
+    .downloadbar {
+      width: 240px;
+      height: 330px;
+      border: 1px solid var(--Main-15-40);
+      border-radius: 10px;
+      padding: 40px 25px;
+      margin-top: 300px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .wrap_report{
+      width: 1050px;
+    }
+    .download_button{
+      color: var(--Main-15);
+      border: 1px solid var(--Main-15);
+      border-radius: 6px;
+    }
+    #div_morpheme{
+      float: left; 
+      width: 47%; 
+      height: 270px;
+    }
+    #div_speed{
+      float: right; 
+      width: 50%; 
+      height: 270px;
+    }
+  </style>
   <body>
+    {% include 'inc/header.html' %}
+    <div class="container_report">
+        <section class="main_report">
+          <div class="wrap_report">
+            <div class="title_report font-headline3">
+              <img src="../static/images/logo_blue.png"/>
+              <span>AI 면접 개별 보고서</span>
+            </div>
+            <div class="content_report">
+              <div class="element_report">
+                <div class="myScreen_report component" style="border: 1px solid #c6d0e0;">
+                  <img src="../static/images/myscreenEx.png"/>
+                </div>
+                <div class="questionList_report component font-body8" style="border: 1px solid #c6d0e0;">
+                  <div class="question_report">
+                    1. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다.
+                  </div>
+                  <div class="question_report">
+                    2. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다.
+                  </div>
+                  <div class="question_report">
+                    3. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다.
+                  </div>
+                  <div class="question_report">
+                    4. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다.
+                  </div>
+                  <div class="question_report">
+                    5. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다. 질문입니다.
+                  </div>
+                </div>
+              </div>
+              <div class="element_report font-body8">
+                <div class="component text-center">
+                  답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 답변입니다. 
+                </div>
+              </div>
+              <div class="element_report">
+                <span class="font-headline3" style="float: left; width: 50%;">형태소</span>
+                <span class="font-headline3" style="float: right; width: 50%;">속도</span>
+                <div class="component text-center" id="div_morpheme">
+                  <img src="../static/images/morpheme.png"/>
+                </div>
+                <div class="component text-center" id="div_speed" style="float: right; width: 50%; height: 270px;">
+                  <img src="../static/images/speed.png"/>
+                </div>
+              </div>
+              <div class="element_report">
+                <span class="font-headline3">표정분석</span>
+                <div class="component text-center">
+                  <img src="../static/images/faceAnalysis.png"/>
+                </div>
+              </div>
+              <div class="element_report font-body8">
+                <span class="font-headline3">종합코멘트</span>
+                <div class="component text-center">
+                  종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 
+                </div>
+              </div>
+            </div>
+
+            <!-- 종합 보고서 -->
+            <div class="title_report font-headline3" style="padding-top: 50px;">
+              <img src="../static/images/logo_blue.png"/>
+              <span>AI 면접 종합 보고서</span>
+            </div>
+            <div class="content_report">
+              <div class="element_report">
+                <span class="font-headline3" style="float: left; width: 50%;">형태소</span>
+                <span class="font-headline3" style="float: right; width: 50%;">속도</span>
+                <div class="component text-center" id="div_morpheme">
+                  <img src="../static/images/morpheme.png"/>
+                </div>
+                <div class="component text-center" id="div_speed" style="float: right; width: 50%; height: 270px;">
+                  <img src="../static/images/speed.png"/>
+                </div>
+              </div>
+              <div class="element_report">
+                <span class="font-headline3">표정분석</span>
+                <div class="component text-center">
+                  <img src="../static/images/faceGraphEx.png"/>
+                  <img src="../static/images/faceAnalysis.png"/>
+                </div>
+              </div>
+              <div class="element_report font-body8">
+                <span class="font-headline3">종합코멘트</span>
+                <div class="component text-center">
+                  종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 종합코멘트입니다. 
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+              <div class="base_primary_large_btn" style="margin-right: 100px;">히스토리로 이동</div>
+              <div class="base_primary_large_btn">메인화면으로 나가기</div>
+            </div>
+          </div>
+          <!-- downloadbar -->
+          <div class="downloadbar">
+              <div style="font-size: 12px; font-weight: bold;"><span style="color: var(--Main-15);">개별 보고서</span>는 히스토리에 <span style="color: var(--Main-15);">30일동안보관</span>된 후 자동 삭제됩니다.</div>
+              <div style="font-size: 12px; font-weight: bold;"><span style="color: var(--Main-15);">종합보고서</span>는 히스토리에 <span style="color: var(--Main-15);">영구보관</span>되며 PDF로 다운로드가 가능합니다.</div>
+              <div style="font-size: 12px; font-weight: bold;">위 안내사항을 확인 후 필요 시 미리 다운로드 해주세요!</div>
+              <div class="wrap_button" style="margin-top: 20px;">
+                <div class="base_square_btn1">개별보고서 다운로드</div>
+                <div class="base_square_btn1" style="margin-top: 10px;">종합보고서 다운로드</div>
+            </div>
+          </div>
+        </section>
+    </div>
   </body>
 </html>
