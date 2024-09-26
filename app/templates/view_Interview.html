@@ -3,53 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <title>Main</title>
+    {% include 'inc/import.html' %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/hireu.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/color.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/interview.css') }}">
-    <link rel="stylesheet" href="../static/css/interview.css"> <!--이 밑 4개는 서버 연결 후 지워주세요-->
-    <link rel="stylesheet" href="../static/css/main.css">
-    <link rel="stylesheet" href="../static/css/global.css">
-    <link rel="stylesheet" href="../static/css/color.css">
+    <script src="{{ url_for('static', filename='js/interview.js') }}"></script>
   </head>
   <body>
     <div class="interview_wrap">
       <nav class="menuBar_wrap">
         <ul class="menuBar">
-          <li class="menu" class="font-btn2">1 면접 준비</li>
-          <li class="menu" class="font-btn2">2 사용자 설정</li>
-          <li class="menu" class="font-btn2">3 면접 진행</li>
-          <li class="menu" class="font-btn2">4 레포트 생성</li>
-          <li class="menu" class="font-btn2">5 면접 종료</li>
+          <!--버튼 아니지만 개발을 위한 임시로 onclick 넣어둠-->
+          <li class="menu selected" class="font-btn2" onclick="loadInterviewPreparation();">1 면접 준비</li>
+          <li class="menu" class="font-btn2" onclick="loadUserSettings();">2 사용자 설정</li>
+          <li class="menu" class="font-btn2" onclick="loadInterviewProcess();">3 면접 진행</li>
+          <li class="menu" class="font-btn2" onclick="loadReportGeneration();">4 레포트 생성</li>
+          <li class="menu" class="font-btn2" onclick="loadInterviewCompletion();">5 면접 종료</li>
         </ul>
       </nav><!--nav-->
-      <section class="contents">
-        <div class="container">
-          <div class="top">
-            <div class="question">
-              <p class="font-body3">“ 기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다.
-                기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다.
-                기본 면접 질문입니다. 기본 면접 질문입니다. 기본 면접 질문입니다. ”</p>
-            </div>
-          </div>
-          <div class="middle">
-            <div class="video"></div>
-            <div class="time">
-              <p class="font-body3">생각 시간</p>
-              <div class="timer">
-                <img src="../static/images/loding.png" alt="" class="loding">
-                <div id="log"><span>30</span></div>
-                <p class="font-body3">초</p>
-              </div>
-            </div>
-          </div>
-          <div class="bottom">
-            <div class="pageNum font-body3">
-              <p>1 / 5</p>
-            </div>
-          </div>
-        </div><!--container-->
-      </section>
+      <section class="contents" id="interview_content"></section>
     </div><!--wrap-->
   </body>
 </html>

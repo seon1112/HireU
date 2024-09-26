@@ -27,7 +27,7 @@ nav{
   color:var(--White);
 }
 
-.menu:nth-child(3){
+.menu.selected{
   border-bottom: solid 2px #fff;
   background-color: rgba(0, 0, 0, 0.3)
 }
@@ -153,3 +153,188 @@ nav{
 
 .pageNum>p{  line-height: 50px;}
 
+.container.preparation{
+  flex-basis: 925px;
+  padding:82px ;
+  min-width: 0px;
+}
+
+.container .preparation_wrap{
+  display: flex;
+  flex-direction: column;
+  gap:66px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+
+.container .preparation_wrap.setting{
+  gap:67x;
+}
+
+.container .preparation_wrap .preparation_content_wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.container .preparation_wrap .preparation_content_wrap .content_top{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.container .preparation_wrap .preparation_content_wrap .content_top .title{
+  color:var(--Main-12);
+}
+
+.container .preparation_wrap .preparation_content_wrap .content_top .sub{
+  color:var(--Main-6);
+}
+
+.container .preparation_wrap .preparation_content_wrap .content_wrap{
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  gap: 30px;
+}
+
+.container .preparation_wrap .preparation_content_wrap .content_wrap .content_item{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.container .preparation_wrap .preparation_content_wrap .content_wrap .content_item .title{
+  color:var(--Main-12);
+} 
+
+.container .preparation_wrap .preparation_content_wrap .content_wrap .content_item .content_icon{
+  background-color: var(--Main-28);
+  border-radius: 20px;
+  width: 140px;
+  height: 140px;
+  background-size: 70px 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container .preparation_wrap .preparation_content_wrap .content_wrap .content_item .content_icon.cam{
+  background-image: url('../images/cam.png');
+}
+.container .preparation_wrap .preparation_content_wrap .content_wrap .content_item .content_icon.mic{
+  background-image: url('../images/mic.png');
+}
+.container .preparation_wrap .preparation_content_wrap .content_wrap .content_item .content_icon.internet{
+  background-image: url('../images/internet.png');
+}
+
+.container .btn_wrap{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .btn_wrap > button{
+  height: 50px;
+}  
+
+.container.setting{
+  flex-basis: 925px;
+  padding:70px 82px;
+  min-width: 0px;
+}
+
+.content_wrap.cam_content{
+    width: 514px;
+    height: 366px;
+    border-radius: 20px;
+    background-color: var(--Main-12);
+}
+
+.container.report{
+  flex-basis: 706px;
+  padding:82px ;
+  min-width: 0px;
+}
+
+.container.report .report_wrap
+,.complete_wrap
+{
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  justify-items: center;
+  align-items: center;
+}
+
+.container.report .report_wrap .title{
+  color: var(--Main-3);
+}
+
+.container .paper_icon{
+  width: 170px;
+  height: 170px;
+  background-image: url('../images/paper.png');
+  background-position: center;
+  background-size: 170px;
+  background-repeat: no-repeat;
+}
+
+.container.report .report_wrap .bottom_wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-self: stretch;
+  align-items: center;
+}
+
+.container.report .report_wrap .bottom_wrap .title{
+  color: var(--Main-12);
+}
+
+.container.report .report_wrap .bottom_wrap .sub{
+  color: var(--Main-6);
+}
+
+.complete_wrap .paper_icon{
+  margin-bottom: 15px;
+}
+
+.complete_wrap .complete_bottom_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.complete_wrap .complete_bottom_wrap .title{
+  color: var(--Main-12);
+}
+
+ul.comment_ul {
+  padding-left: 0;
+}
+
+ul.comment_ul li {
+  position: relative;
+  padding-left: 15px;
+  color: var(--Main-6);
+}
+
+ul.comment_ul li::before {
+  position: absolute;
+  color: var(--Main-6);
+  content: '\2022'; 
+  left: 0;
+}
+
+.comment_li > span{
+  color:var(--Main-3);
+}

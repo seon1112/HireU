@@ -26,6 +26,9 @@ def create_app():
     jwt = JWTManager(app)
 
     # 블루프린트 등록
+    from .routes.interview_routes import interview_bp
+    app.register_blueprint(interview_bp)
+    
     from .routes.face_recognition_routes import face_recognition_bp
     app.register_blueprint(face_recognition_bp)
 
