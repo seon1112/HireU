@@ -5,29 +5,36 @@ $(function(){
     center: false,
     loop:false,
     margin:24,
-    nav:false,
+    navigation:false,
     responsive:{
       0:{
           items:1
       },
       768:{
-          items:4
+          items:2
+      },
+      1400:{
+        items:4
       }
-    }
+      }
     });
 
     $('.report_slider').owlCarousel({
-      item:2,
+      items:3,
       center: true,
       loop:false,
       margin:30,
-      nav:true,
-/*       responsive:{
-        0:{
-            items:2
-        }
-      } */
-      });
+      navigation:false,
+      itemsScaleUp:true,
+      responsive:{
+      0:{
+          items:1
+      },
+      1200:{
+          items:2
+      },
+      }
+    });
 
 
     // # 시작 함수
